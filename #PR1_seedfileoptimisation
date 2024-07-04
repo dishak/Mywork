@@ -1,5 +1,5 @@
 
-# PR contribution to code repo: https://github.com/code100x/daily-code
+# PR contribution to code repo: [100x-dailycode repo](https://github.com/code100x/daily-code)
 
 # Error: seed command failed due to unique contraint error while seeding db for project setup
 
@@ -13,4 +13,4 @@
     - Program changes:  - Added upsert function to check for data presence.
                         - Optimised the seed file logic to avoid DRY(Dont repeat yourself) of code in which the data that was used to seed was done using loops and arrays.
                 
-    - Issue addressed in PR :   - https://github.com/code100x/daily-code/pull/424 
+    - Issue addressed in PR :   - [PR-contribution](https://github.com/code100x/daily-code/pull/424 )
