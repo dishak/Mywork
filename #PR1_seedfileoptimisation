@@ -1,16 +1,18 @@
+# PR Contribution to Code Repo: [100x-dailycode repo](https://github.com/code100x/daily-code)
 
-# PR contribution to code repo: [100x-dailycode repo](https://github.com/code100x/daily-code)
+## Error: Seed Command Failed Due to Unique Constraint Error While Seeding DB for Project Setup
 
-# Error: seed command failed due to unique contraint error while seeding db for project setup
+- **Description**: While setting up the project locally, which included a couple of steps like:
+  - Prisma migrate and Prisma seed.
+  there was an error occurring due to a unique constraint issue when `npx prisma db:seed` command was executed.
 
-    - Description : While setting project  locally which included couple of steps like:
-                    - prisma migrate and prisma seed.
-                    there was error occuring due to unique contraint issue when npx prisma db:seed command was executed.
+- **Analysis**: 
+  The reason for this was that if an error occurred while seeding, the program would exit. 
+  This error could be due to an error in the seed file itself or if some unknown error occurred while seeding the DB. The logic which seeded the DB wasn't checking for the presence of unique data in tables. Due to this, when the seed command ran again, it threw a unique constraint error which would resolve if the DB was reset completely, removing the volumes in the case of Docker containers. This led to unnecessary overhead for developers. This problem of unique constraint could be solved by adding the Prisma function `upsert` which checks for the presence of data in the DB before populating the data and if it exists it won't update that particular data, thereby avoiding the unique constraint issue.
 
-    - Analysis  :   The reason for this being that if some error occured while seeding the program would exit. 
-                    This error could be an error in seed file itself or if some unknown error occured while seeding of DB. The logic which seeded the DB wasn't checking for presence of  unique data in tables, due to which when the seed command ran again it  threw unique contraint error  which would resolve if db was resetted completely removing the volumes in case of docker containers.Leading to unnecessary overhead for developers. This problem of unique constraint could be solved by adding the prisma function upsert which checks for the presence of data in the DB before populating the data and if it exists it wont update that particular data thereby avoiding the unique contraint issue.
+- **Program Changes**: 
+  - Added `upsert` function to check for data presence.
+  - Optimized the seed file logic to avoid DRY (Don't Repeat Yourself) of code by using loops and arrays for the data that was used to seed.
 
-    - Program changes:  - Added upsert function to check for data presence.
-                        - Optimised the seed file logic to avoid DRY(Dont repeat yourself) of code in which the data that was used to seed was done using loops and arrays.
-                
-    - Issue addressed in PR :   - [PR-contribution](https://github.com/code100x/daily-code/pull/424 )
+- **Issue Addressed in PR**: 
+  - [PR Contribution](https://github.com/code100x/daily-code/pull/424)
