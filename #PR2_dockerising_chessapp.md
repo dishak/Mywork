@@ -12,12 +12,12 @@ If it was repo w/o shared dependencies then, multiple dockerfiles depending on n
 There is a docker-compose.yml file to start all the services or apps using just 1 command.
 
 Coming back to the Dockerfile.It has root image,intermediate , frontend,backend,ws image as divisions this style of writing Dockerfile is referred as multi-stage builds one can refer to any image and build docker image from any section and each section can use other section as it's base image there by using docker caching for lower build time.
- ## root_img   :
+ ## root_img   
     - Here set of dependencies and files used by all components / services in apps folder will be in the built root_image.
     The strategy of copying and installing only the required `package.json` files first, followed by the rest of the files, aims to increase the number of layers in the Dockerfile. This approach helps reduce build time by pushing the least frequently changed files to the top, thus avoiding unnecessary builds when code changes don't affect these files.
 
 ## intermediate_img:
-     Copies remaining files from root folder except /apps & /packages this effort is deliberately to keep the resulting image size minimal.
+    - Copies remaining files from root folder except /apps & /packages this effort is deliberately to keep the resulting image size minimal.
 
 ## backend_img , frontend_img , ws_img:
     - Uses root image & intermediate image then, copies & installs dependencies only related to backend from package folder & later copies rest backend files, this procedure helps to lower build time and docker caching.
