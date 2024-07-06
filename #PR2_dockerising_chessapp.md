@@ -15,16 +15,13 @@ Coming back to the Dockerfile.It has root image,intermediate , frontend,backend,
  **root_img :**  
     - Here set of dependencies and files used by all components / services in apps folder will be in the built root_image.
     The strategy of copying and installing only the required `package.json` files first, followed by the rest of the files, aims to increase the number of layers in the Dockerfile. This approach helps reduce build time by pushing the least frequently changed files to the top, thus avoiding unnecessary builds when code changes don't affect these files.
-
 **intermediate_img:**
     - Copies remaining files from root folder except /apps & /packages this effort is deliberately to keep the resulting image size minimal.
-
 **backend_img , frontend_img , ws_img:**
     - Uses root image & intermediate image then, copies & installs dependencies only related to backend from package folder & later copies rest backend files, this procedure helps to lower build time and docker caching.
-
-** Docker-compose.yml file :**
+**Docker-compose.yml file :**
     - It starts the 4 services (incl Postgres DB) using compose up command.
-
+**Hot reloading:**    
 For development HMR/ hot reloading is a great tool as it will reduce executing rebuilding manually after every code edit to check the effect. Just by saving the code rebuilding happens automatically without executing build command.
 For frontend vite is used which provides inbuilt HMR 
 For backend and Websocket nodemon was used for this feature. For this to take effect I wrote a nodemon.json file for each of them. nodemon.json which will define file to watch out for continuously (index.ts in our case) and when changes found to execute command of rebuilding and restarting the server.
