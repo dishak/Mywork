@@ -1,4 +1,4 @@
-# PR Contribution to Code Repo: [My PR](https://github.com/code100x/daily-code/pull/424) ,[100x-dailycode repo](https://github.com/code100x/daily-code)
+# PR Contribution to Code Repo: [My PR](https://github.com/code100x/daily-code/pull/424) ,  [code repo](https://github.com/code100x/daily-code)
 
 ## Error: Seed Command Failed Due to Unique Constraint Error While Seeding DB for Project Setup
 
