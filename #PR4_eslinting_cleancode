@@ -1,5 +1,5 @@
-# PR Contribution to Code Repo: [My PR](link here) ,  [code repo](link here)
-## Task: Linting the codebase with 2 backend services and 1 frontend service.
+# PR Contribution to Code Repo: [My PR](https://github.com/dishak/Collaborative-code-editor/pull/1) ,  [code repo](https://github.com/dishak/Collaborative-code-editor/tree/linting-codebase)
+## Task: Linting the codebase (2 backend services and 1 frontend service)
 - **Description**: Exercising good code practises makes the codebase easier to maintain across development history. 
 
 - **Analysis**: To exercise industry level code maintaining practise there are various tools to achieve liniting(term for developing clean code) here used is famouse tool called: eslint.
@@ -14,4 +14,4 @@ Some of the code practises which were fixed are:
 These are few among many other code practises which were applied to the codebase. It's not necessary to use it but, always good to use to maintain good code practises especially when many developers are working on the same project and having standardisation across development environments.
 
 - **Issue Addressed in PR**: 
-  - [PR Contribution](link here)
+  - [PR Contribution](https://github.com/dishak/Collaborative-code-editor/pull/1)
