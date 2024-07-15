@@ -1,0 +1,17 @@
+# PR Contribution to Code Repo: [My PR](link here) ,  [code repo](link here)
+## Task: Linting the codebase with 2 backend services and 1 frontend service.
+- **Description**: Exercising good code practises makes the codebase easier to maintain across development history. 
+
+- **Analysis**: To exercise industry level code maintaining practise there are various tools to achieve liniting(term for developing clean code) here used is famouse tool called: eslint.
+Airbnb's style of code linitng is applied in the PR for code base.
+Some of the code practises which were fixed are: 
+1. no use before define : a function call should not be made before declaring.
+2. a variable name in local scope is not allowed when same name is used under  golbal scope
+3. unused variables should be removed.
+4. Every function should have a return.
+5. no return from a promise executor function as a promise executor function never returns a value it either resolves or throws error.
+6. Having appropriate indentation , semicolons at end of every code statement, having appropriate spaces in between function parantheses.
+These are few among many other code practises which were applied to the codebase. It's not necessary to use it but, always good to use to maintain good code practises especially when many developers are working on the same project and having standardisation across development environments.
+
+- **Issue Addressed in PR**: 
+  - [PR Contribution](link here)
