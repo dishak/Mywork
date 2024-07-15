@@ -1,17 +1,25 @@
-# PR Contribution to Code Repo: [My PR](https://github.com/dishak/Collaborative-code-editor/pull/1) ,  [code repo](https://github.com/dishak/Collaborative-code-editor/tree/linting-codebase)
-## Task: Linting the codebase (2 backend services and 1 frontend service)
-- **Description**: Exercising good code practises makes the codebase easier to maintain across development history. 
+# PR Contribution to Code Repo
 
-- **Analysis**: To exercise industry level code maintaining practise there are various tools to achieve liniting(term for developing clean code) here used is famouse tool called: eslint.
-Airbnb's style of code linitng is applied in the PR for code base.
-Some of the code practises which were fixed are: 
-1. no use before define : a function call should not be made before declaring.
-2. a variable name in local scope is not allowed when same name is used under  golbal scope
-3. unused variables should be removed.
-4. Every function should have a return.
-5. no return from a promise executor function as a promise executor function never returns a value it either resolves or throws error.
-6. Having appropriate indentation , semicolons at end of every code statement, having appropriate spaces in between function parantheses.
-These are few among many other code practises which were applied to the codebase. It's not necessary to use it but, always good to use to maintain good code practises especially when many developers are working on the same project and having standardisation across development environments.
+- **PR Link**: [My PR](http://github.com/dishak/Collaborative-code-editor/pull/1)
+- **Code Repo**: [Code Repository](http://github.com/dishak/Collaborative-code-editor/tree/linting-codebase)
 
-- **Issue Addressed in PR**: 
-  - [PR Contribution](https://github.com/dishak/Collaborative-code-editor/pull/1)
+## Task: Linting the Codebase (2 Backend Services and 1 Frontend Service)
+
+### Description
+Exercising good code practices makes the codebase easier to maintain across development history.
+
+### Analysis
+To implement industry-level code maintenance practices, various tools are available to achieve linting (term for developing clean code). In this PR, the famous tool ESLint is used. Airbnb's style guide is applied for code linting in the PR for the codebase.
+
+### Key Code Practices Fixed
+1. **No Use Before Define**: A function call should not be made before it is declared.
+2. **Variable Naming Conflicts**: A variable name in the local scope is not allowed when the same name is used in the global scope.
+3. **Unused Variables**: Unused variables are removed.
+4. **Function Return**: Every function should have a return statement.
+5. **Promise Executor Functions**: No return from a promise executor function, as a promise executor function never returns a value; it either resolves or throws an error.
+6. **Code Formatting**: Appropriate indentation, semicolons at the end of every code statement, and appropriate spacing in between function parentheses.
+
+These are a few among many other code practices applied to the codebase. While it is not strictly necessary to use linting, it is always beneficial to maintain good code practices, especially when multiple developers are working on the same project, to ensure standardization across development environments.
+
+### Issue Addressed in PR
+- **PR Contribution**: [PR Contribution](http://github.com/dishak/Collaborative-code-editor/pull/1)
