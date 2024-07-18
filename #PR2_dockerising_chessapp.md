@@ -32,7 +32,16 @@ For frontend vite is used which provides inbuilt HMR
 For backend and Websocket nodemon was used for this feature. For this to take effect I wrote a nodemon.json file for each of them. nodemon.json which will define file to watch out for continuously (index.ts in our case) and when changes found to execute command of rebuilding and restarting the server.
 
 
-    
+## Edit    : 
+# Best Practices for Dockerfile Management
+
+Having separate Dockerfiles for each service is best practice as the codebase grows. It is the cleanest approach due to the separation of concerns.
+
+Additionally, in cases where there are shared dependencies outside the context of a Dockerfile present in a service folder, these shared dependencies can be referenced into the Dockerfile's context using the command:
+
+```sh
+docker build -t tag_name -f ./path_to_dockerfile .
+
 
 
 
