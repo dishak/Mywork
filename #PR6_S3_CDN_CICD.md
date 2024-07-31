@@ -1,7 +1,7 @@
 # PR Contribution to Code Repo
 
-- **PR Link**: [My PR]()
-- **Code Repo**: [Code Repository]()
+- **PR Link**: [My PR](https://github.com/dishak/Collaborative-code-editor/pull/4)
+- **Code Repo**: [Code Repository](https://github.com/dishak/Collaborative-code-editor/tree/s3_cdn_cicd)
 
 ## Task: Formulating a CI/CD pipeline for deploying frontend in S3 and backend to EC2 & making the frontend available via CDN of AWS i.e CloudFront
 
@@ -12,4 +12,4 @@ Frontend is usually served via CDN deploying frontend on S3 V/s Deploying it on 
 The CI/CD in the code repo tries to login in using user aws credentials created using IAM from the console. The user in this case is givenn programatic access which in turn has to prove its validity using AWS access key & id. In our case the user is our github action which will login by passing the secrets (access key & id) stored and deploy the react build file from the project to S3 bucket.
 
 ### Issue Addressed in PR
-- **PR Contribution**: [PR Contribution](http://github.com/dishak/Collaborative-code-editor/pull/1)
+- **PR Contribution**: [PR Contribution](https://github.com/dishak/Collaborative-code-editor/pull/4)
