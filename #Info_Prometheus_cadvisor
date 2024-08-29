@@ -1,0 +1,34 @@
+# Container Monitoring with cAdvisor and Prometheus
+
+This PR introduces container monitoring using cAdvisor and Prometheus. The setup enables detailed monitoring of container performance and resource usage, which is essential for effective management and optimization.
+
+## Overview
+
+- **cAdvisor** is used to collect container-specific metrics.
+- **Prometheus** scrapes and stores these metrics from cAdvisor.
+
+## Metrics Collected by cAdvisor
+
+cAdvisor exports a variety of metrics related to container performance:
+
+1. **CPU Usage**
+   - Tracks the CPU usage of each service container.
+
+2. **Memory Usage**
+   - Monitors memory consumption for each container.
+
+3. **Network Bandwidth and Packet Statistics**
+   - Provides information on network traffic, including bandwidth usage and packet counts.
+
+4. **Disk I/O**
+   - Measures disk read and write operations, reporting the amount of data read from and written to the disk by each container (in bytes).
+
+5. **File System Usage**
+   - Shows how much disk space is occupied by each container's filesystem, including data and metadata.
+
+## How It Works
+
+- **cAdvisor** collects metrics related to CPU, memory, network, disk I/O, and filesystem usage.
+- **Prometheus** is configured to scrape data from cAdvisor endpoints at regular intervals.
+
+I faced a problem where i tried changing the internal port map of cadvisor to other than its default 8080 so its must that  the container port for cadvisor  should be 8080.
